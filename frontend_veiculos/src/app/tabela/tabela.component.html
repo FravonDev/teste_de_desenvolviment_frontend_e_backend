@@ -1,0 +1,48 @@
+<mat-table [dataSource]="dados" matSort>
+  <ng-container matColumnDef="routeCode">
+    <mat-header-cell *matHeaderCellDef mat-sort-header>Route Code</mat-header-cell>
+    <mat-cell *matCellDef="let row">{{ row.routeCode }}</mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="routeMnemonic">
+    <mat-header-cell *matHeaderCellDef mat-sort-header>Route Mnemonic</mat-header-cell>
+    <mat-cell *matCellDef="let row">{{ row.routeMnemonic }}</mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="companyId">
+    <mat-header-cell *matHeaderCellDef mat-sort-header>Company ID</mat-header-cell>
+    <mat-cell *matCellDef="let row">{{ row.companyId }}</mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="stopId">
+    <mat-header-cell *matHeaderCellDef mat-sort-header>Stop ID</mat-header-cell>
+    <mat-cell *matCellDef="let row">{{ row.stopId }}</mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="serviceId">
+    <mat-header-cell *matHeaderCellDef mat-sort-header>Service ID</mat-header-cell>
+    <mat-cell *matCellDef="let row">{{ row.serviceId }}</mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="serviceMnemonic">
+    <mat-header-cell *matHeaderCellDef mat-sort-header>Service Mnemonic</mat-header-cell>
+    <mat-cell *matCellDef="let row">{{ row.serviceMnemonic }}</mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="predictionType">
+    <mat-header-cell *matHeaderCellDef mat-sort-header>Prediction Type</mat-header-cell>
+    <mat-cell *matCellDef="let row">{{ row.predictionType }}</mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="activeVehicles">
+    <mat-header-cell *matHeaderCellDef mat-sort-header>Active Vehicles</mat-header-cell>
+    <mat-cell *matCellDef="let row">{{ row.activeVehicles }}</mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="scheduledVehicles">
+    <mat-header-cell *matHeaderCellDef mat-sort-header>Scheduled Vehicles</mat-header-cell>
+    <mat-cell *matCellDef="let row">{{ row.scheduledVehicles }}</mat-cell>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="['routeCode', 'routeMnemonic', 'companyId', 'stopId', 'serviceId', 'serviceMnemonic', 'predictionType', 'activeVehicles', 'scheduledVehicles']"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: ['routeCode', 'routeMnemonic', 'companyId', 'stopId', 'serviceId', 'serviceMnemonic', 'predictionType', 'activeVehicles', 'scheduledVehicles']">
