@@ -7,7 +7,7 @@ import org.springframework.web.client.RestTemplate;
 public class CittamobiController {
     public ResponseEntity<String> getVehicleData() {
         RestTemplate restTemplate = new RestTemplate();
-        String url = "https://api.cittamobi.com.br/m3p/js/prediction/stop/5208036.5195544";
+        String url = "https://api.cittamobi.com.br/m3p/js/prediction/stop/5195544";
         ResponseEntity<String> response = restTemplate.getForEntity(url, String.class);
         return response;
     }
